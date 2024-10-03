@@ -157,6 +157,8 @@ public class Chooser extends CordovaPlugin {
 							// this.callback.success(result.toString());
                         } catch (JSONException e) {
                             this.callback.error("JSON Object not supported");
+                        }catch (OutOfMemoryError e) {
+                            this.callback.error("Kindly select file with smaller size.");
                         }
 					}
 					else {
